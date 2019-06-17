@@ -1,7 +1,8 @@
 require("dotenv").config();
 const express = require("express");
+const massive = require("massive");
 const session = require("express-session");
-
+const {signupUser, loginUser, getUser, logout} = require('./controllers/authController')
 const app = express();
 
 let { SERVER_PORT, SESSION_SECRET } = process.env;
@@ -19,15 +20,15 @@ app.use(
   })
 );
 
-// app.post("/auth/signup", signupUser)
-// app.post("/auth/login", loginUser)
-// app.get("/auth/user", getUser)
-// app.post("/auth/logout", logout)
+app.post("/auth/signup", signupUser)
+app.post("/auth/login", loginUser)
+app.get("/auth/user", getUser)
+app.post("/auth/logout", logout)
 
-// massive(process.env.CONNECTION_STRING).then(db => {
-//   app.set("db", db)
-//   console.log("Database connected")
-// })
+massive(process.env.CONNECTION_STRING).then(db => {
+  app.set("db", db)
+  console.log("Database connected")
+});
 
 
 

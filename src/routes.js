@@ -1,6 +1,6 @@
 import React from "react";
-import {Switch, Route} from "react-router-dom";
-import Nav from './components/Nav';
+import {Switch, Route,} from "react-router-dom";
+
 import Home from './components/home/Home';
 import About from './components/about/About';
 import Events from './components/events/Events';
@@ -13,7 +13,7 @@ export default (
     
       
      <Switch>
-      <Route component={ Nav } />
+      
       <Route path="/" exact component={ Home }  />
       <Route path="/about" component={ About }  />
       <Route path="/events" component={ Events }  />

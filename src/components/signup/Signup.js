@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from "axios";
-import {Redirect} from  "react-router-dom";
+import {Redirect, Link } from  "react-router-dom";
+
 
 
 export class Signup extends Component {
@@ -39,8 +40,8 @@ export class Signup extends Component {
             <div>
                <h3>Create a New Account</h3>
             
-            <div>Username<input onChange={this.handleUsername} placeholder="username"/>
-                Password<input onChange={this.handlePassword}placeholder="password" type="password"/>
+            <div><input onChange={this.handleUsername} placeholder="username"/>
+                <input onChange={this.handlePassword}placeholder="password" type="password"/>
             </div>
             <button onClick={this.signupUser}>New Account</button>
             </div>

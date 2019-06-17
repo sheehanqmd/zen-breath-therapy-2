@@ -10,12 +10,12 @@ const GET_USER = "GET_USER";
 export function getUser() {
   return {
     type: GET_USER,
-    payload: axios.get("/auth/user").catch(err => err)
+    payload: axios.get("/auth/user").then(err => err)
   };
 }
 
 export default function userReducer(state = initialState, action) {
-  console.log(state);
+ 
   switch (action.type) {
     case `${GET_USER}_FULFILLED`:
       return {
