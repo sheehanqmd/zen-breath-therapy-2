@@ -10,10 +10,14 @@ export class Signup extends Component {
         this.state ={
             username: "",
             password: "",
+            // firstName: "",
+            // lastName: "",
             redirect: false
         }
         this.handleUsername = this.handleUsername.bind(this)
         this.handlePassword = this.handlePassword.bind(this)
+        // this.handleFirstName = this.handleFirstName.bind(this)
+        // this.handleLastName = this.handleLastName.bind(this)
         this.signupUser = this.signupUser.bind(this)
     }
 
@@ -24,6 +28,10 @@ export class Signup extends Component {
     handlePassword(e){
         this.setState({password: e.target.value})
     }
+
+    // handleFirstName(e){
+    //     this.setState({firstName: e.target.value})
+    // }
 
     signupUser(){
         axios.post("/auth/signup", {username: this.state.username, password: this.state.password})
@@ -38,12 +46,14 @@ export class Signup extends Component {
         }
         return (
             <div>
+                <div className="container">
                <h3>Create a New Account</h3>
             
             <div><input onChange={this.handleUsername} placeholder="username"/>
                 <input onChange={this.handlePassword}placeholder="password" type="password"/>
             </div>
-            <button onClick={this.signupUser}>New Account</button>
+            <button className="btn-signup" onClick={this.signupUser}>Add New Account</button>
+            </div>
             </div>
         )
     }

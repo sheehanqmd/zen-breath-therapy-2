@@ -13,7 +13,8 @@ function Nav() {
           <li><Link to="/events" className="/events">EVENTS</Link></li>
           <li><Link to="/cart" className="/cart">CART</Link></li>
           <li><Link to="/login" className="/login">LOG IN</Link></li>
-          <li><Link to="/signup" className="/signup">SIGN UP</Link></li>   
+          <li><Link to="/signup" className="/signup">SIGN UP</Link></li> 
+          <li><Link to="/logOutButton" className="/logOutButton">LOG OUT</Link></li>  
           <li><Link to= "nav-link"className="btn btn-floating grey darken-3">ZB</Link></li>
          
           <Link></Link>

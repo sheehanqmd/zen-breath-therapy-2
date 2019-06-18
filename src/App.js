@@ -11,6 +11,7 @@ function App() {
     <Router>
     <div className="App">
       <Nav />
+      
       {routes}
     </div>
     </Router>

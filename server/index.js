@@ -24,6 +24,7 @@ app.post("/auth/signup", signupUser)
 app.post("/auth/login", loginUser)
 app.get("/auth/user", getUser)
 app.post("/auth/logout", logout)
+// app.get("/api/event", getEvent)
 
 massive(process.env.CONNECTION_STRING).then(db => {
   app.set("db", db)

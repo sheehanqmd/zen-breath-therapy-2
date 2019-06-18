@@ -35,19 +35,19 @@ export class Login extends Component {
 
     render() {
 if(this.state.redirect){
-    alert("login successful. Welcome.")
+   
     return <Redirect to="/"/>
     
 }
 
         return (
-            <div>
-               <h3> Login</h3>
-               <div> Username
+            <div className="container">
+               <h3> Log In</h3>
+               <div> 
                    <input placeholder = "username" onChange={this.handleUsername}/>
-                   Password
+                   
                    <input placeholder ="password " type = "password" onChange={this.handlePassword}/>
-                   <button onClick={this.loginUser}>Password</button>
+                   <button className="btn-login" variant="contained" onClick={this.loginUser}>Log In</button>
 
                </div>
             </div>

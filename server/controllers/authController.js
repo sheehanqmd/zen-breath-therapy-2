@@ -36,10 +36,10 @@ module.exports = {
                 
                 bcrypt.compare(password, user[0].password).then(doesMatch => {
                     if(!doesMatch){
-                        console.log("no user")
+                        
                         res.status(403).json({error: "USERNAME_OR_PASSWORD_INCORRECT"});
                     } else{
-                        console.log('session')
+                       
                         req.session.user = {
                             username: user[0].username,
                             cart: [],

@@ -20,5 +20,6 @@ export default (
       <Route path="/cart" component={ Cart }  />
       <Route path="/login" component={ Login }  />
       <Route path="/signup" component={ Signup }  />
+        
     </Switch>
   );
