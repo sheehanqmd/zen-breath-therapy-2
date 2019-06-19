@@ -19,8 +19,8 @@ class SignedOutLinks extends Component {
         }
         return (
             <div>
-                {/* <Link to="/login"><button>Login</button></Link> 
-                <Link to="/signup"><button>Create Login</button></Link>  */}
+                <Link to="/login"><button>Login</button></Link> 
+                <Link to="/signup"><button>Create Login</button></Link> 
                 <button onClick={this.logoutUser}>LOG OUT</button>
             </div>
         )
