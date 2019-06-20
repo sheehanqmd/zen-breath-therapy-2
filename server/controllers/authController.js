@@ -50,6 +50,8 @@ module.exports = {
                 })
             }
         })
+
+        
     
         
     },
@@ -62,7 +64,7 @@ module.exports = {
       },
 
 
-      logout:(req, res) => {
+      logoutUser:(req, res) => {
         req.session.destroy();
             res.status(200).send(req.session);
             

@@ -7,12 +7,13 @@ import Events from './components/events/Events';
 import Cart from './components/cart/Cart';
 import Login from './components/login/Login';
 import Signup from './components/signup/Signup';
+import Logout from './components/Logout';
 
 
 export default (
     
       
-     <Switch>
+    <Switch>
       
       <Route path="/" exact component={ Home }  />
       <Route path="/about" component={ About }  />
@@ -20,6 +21,6 @@ export default (
       <Route path="/cart" component={ Cart }  />
       <Route path="/login" component={ Login }  />
       <Route path="/signup" component={ Signup }  />
-        
+      <Route path="/logout" component={ Logout } />
     </Switch>
   );

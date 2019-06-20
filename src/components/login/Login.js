@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import axios from "axios";
 import {Redirect} from "react-router-dom";
+import Facebook from "../Facebook";
 
 
 
@@ -48,7 +49,8 @@ if(this.state.redirect){
                    
                    <input placeholder ="password " type = "password" onChange={this.handlePassword}/>
                    <button className="btn-login" variant="contained" onClick={this.loginUser}>Log In</button>
-
+                 <h1 className="facebook-Login"></h1>
+                 <Facebook />
                </div>
             </div>
         )

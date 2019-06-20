@@ -41,9 +41,14 @@ console.log(eventsInfo)
                 {eventsInfo.map((event, index) =>
                     (
                         <div>
-                        <p>{event.name.text}</p>
+                        <h5>{event.name.text}</h5>
                         <p>{event.description.text}</p>
-                        <p>{event.url}</p>
+                        <p className="start">Event Start Date and Time: {event.start.local}</p>
+                        <p className="end">Event End Date and Time: {event.end.local}</p>
+                        <p className="location">Location: {event.venue.address.localized_address_display}</p>
+                        <p><Link>{event.url}</Link></p>
+                        <p><Link to= "nav-link"className="btn btn- black darken-3-LARGE">ADD TO CART</Link></p>
+
                      </div>
                     ))}
                

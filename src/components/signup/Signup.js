@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from "axios";
 import {Redirect, Link } from  "react-router-dom";
+import Facebook from "../Facebook";
 
 
 
@@ -53,7 +54,11 @@ export class Signup extends Component {
                 <input onChange={this.handlePassword}placeholder="password" type="password"/>
             </div>
             <button className="btn-signup" onClick={this.signupUser}>Add New Account</button>
+            <h1 className="facebook-Login"></h1>
+                 <Facebook />
             </div>
+            
+
             </div>
         )
     }
