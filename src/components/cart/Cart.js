@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import axios from "axios";
+import {getUser} from "../../redux/userReducer";
+import {connect} from "react-redux";
 
 
 class Cart extends Component {
@@ -22,7 +24,18 @@ class Cart extends Component {
                 getCart: response.data 
             })
          })
-     }
+        }
+        
+         deleteFromCart(index){
+            axios .delete(`/api/cart/${index}`)
+            .then(response => {
+                console.log(response.data)
+                this.setState ({
+                    getCart: response.data
+                })
+            })
+        
+        }
 
 
     render() {
@@ -37,24 +50,31 @@ class Cart extends Component {
                     <h2>{event.name.text}</h2>
                     <h2>{event.cost}</h2>
                      <button className="cart-button" onClick={() => 
-                        this.props.removeFromCart(event)} >Remove From Cart</button>
+                        this.deleteFromCart(index)} >Remove From Cart</button>
                 </div>
             </div>
         );
     });
     return(
         <div className="cart-container">
-            {cart}
-            {/* {cart[0] ? (
+         
+            {cart[0] ? (
                 cart
             ) : (
                 <div className="empty-cart">
                     <h1>Cart is Empty</h1>
               </div>
-            )} */}
+            )}
         </div>
     )
     }
 }
+const mapStateToProps = reduxState => {
+    const {user} = reduxState ;
+    return {
+        user
+    }
+}
 
-export default Cart
+
+export default connect ( mapStateToProps, {getUser}) (Cart)

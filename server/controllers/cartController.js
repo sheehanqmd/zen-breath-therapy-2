@@ -10,5 +10,13 @@ module.exports = {
             res.status(200).json(req.session.user.cart); 
          }
      
-}
+    },
+    deleteFromCart: (req, res) => {
+      console.log(req.params)
+        req.session.user.cart.splice(+req.params.index,1)
+        console.log(req.session.user.cart)
+        res.status(200).json(req.session.user.cart)
+    },
+
+
 }
