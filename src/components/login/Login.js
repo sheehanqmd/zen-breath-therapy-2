@@ -50,7 +50,7 @@ if(this.state.redirect){
                    <input placeholder ="password " type = "password" onChange={this.handlePassword}/>
                    <button className="btn-login" variant="contained" onClick={this.loginUser}>Log In</button>
                  <h1 className="facebook-Login"></h1>
-                 <Facebook />
+                 {/* <Facebook /> */}
                </div>
             </div>
         )

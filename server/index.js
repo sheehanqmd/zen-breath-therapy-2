@@ -5,6 +5,7 @@ const session = require("express-session");
 const {signupUser, loginUser, getUser, logoutUser } = require('./controllers/authController')
 const app = express();
 const { getEvents} = require('./controllers/eventsController');
+const { addToCart, getCart } = require("./controllers/cartController")
 let { SERVER_PORT, SESSION_SECRET } = process.env;
 // let {'Authorization': `Bearer ${token}`} = process.env;
 
@@ -30,11 +31,17 @@ app.post("/auth/login", loginUser)
 app.get("/auth/user", getUser)
 app.post("/auth/logout", logoutUser)
 app.get("/api/events", getEvents)
+app.post("/api/cart", addToCart)
+app.get("/api/cart", getCart)
+
+// app.post("/api/cart/checkout", cartController.checkout);
+// app.post("/api/cart/:id", cartController.add);
+// app.delete("/api/cart/:id", cartController.delete);
 
 massive(process.env.CONNECTION_STRING).then(db => {
   app.set("db", db)
   console.log("Database connected")
-});
+}).catch(err => console.log(err));
 
 // {'Authorization': `Bearer ${token}`}
 

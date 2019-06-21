@@ -62,4 +62,4 @@ class Facebook extends Component {
     }
 }
 
-export default Facebook;
+// export default Facebook;

@@ -55,7 +55,7 @@ export class Signup extends Component {
             </div>
             <button className="btn-signup" onClick={this.signupUser}>Add New Account</button>
             <h1 className="facebook-Login"></h1>
-                 <Facebook />
+                 {/* <Facebook /> */}
             </div>
             
 
