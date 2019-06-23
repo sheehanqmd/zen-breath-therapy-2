@@ -7,6 +7,7 @@ import Logout from "./Logout";
 function Nav() {
   return(
       <nav className= "nav-wrapper black darken-8">
+        
           <div className="container">
 
           <ul className="right">
@@ -19,7 +20,7 @@ function Nav() {
           <li><Link to="/" className="/"><Logout/></Link></li>  
           <li><Link to= "nav-link"className="btn btn-floating grey darken-3">ZB</Link></li>
          
-          <Link></Link>
+          
           </ul>
           </div>
       </nav>

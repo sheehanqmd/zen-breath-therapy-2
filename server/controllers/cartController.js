@@ -17,6 +17,7 @@ module.exports = {
         console.log(req.session.user.cart)
         res.status(200).json(req.session.user.cart)
     },
+   
 
 
 }

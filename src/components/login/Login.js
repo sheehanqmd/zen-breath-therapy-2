@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import axios from "axios";
+import { Link } from "react-router-dom";
 import {Redirect} from "react-router-dom";
 import Facebook from "../Facebook";
+import EditUsername from "../EditUsername"
 
 
 
@@ -15,9 +17,12 @@ export class Login extends Component {
         };
     
 
-    this.handleUsername = this.handleUsername.bind(this)
+        this.handleUsername = this.handleUsername.bind(this)
         this.handlePassword = this.handlePassword.bind(this)
         this.loginUser = this.loginUser.bind(this)
+        // this.editUsername = this.editUsername.bind(this)
+
+
     }
 
     handleUsername(e){
@@ -34,6 +39,8 @@ export class Login extends Component {
     {alert("login unsuccessful. try again")})
     }
 
+    
+    
     render() {
 if(this.state.redirect){
    
@@ -45,10 +52,14 @@ if(this.state.redirect){
             <div className="container">
                <h3> Log In</h3>
                <div> 
-                   <input placeholder = "username" onChange={this.handleUsername}/>
-                   
+                   <input placeholder = "username" onChange={this.handleUsername}/>             
                    <input placeholder ="password " type = "password" onChange={this.handlePassword}/>
                    <button className="btn-login" variant="contained" onClick={this.loginUser}>Log In</button>
+                    <br />
+                    <br />
+                   <button><Link to="/editUserName" className="editUserName">Edit User Name</Link></button>
+                   {/* <Link to="/" className="home">HOME</Link> */}
+                  
                  <h1 className="facebook-Login"></h1>
                  {/* <Facebook /> */}
                </div>

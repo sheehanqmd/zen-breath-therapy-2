@@ -16,6 +16,7 @@ function App() {
       <Nav />
       
       {routes}
+     
     </div>
     </Router>
    

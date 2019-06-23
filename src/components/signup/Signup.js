@@ -20,6 +20,8 @@ export class Signup extends Component {
         // this.handleFirstName = this.handleFirstName.bind(this)
         // this.handleLastName = this.handleLastName.bind(this)
         this.signupUser = this.signupUser.bind(this)
+       
+
     }
 
     handleUsername(e){
@@ -38,6 +40,8 @@ export class Signup extends Component {
         axios.post("/auth/signup", {username: this.state.username, password: this.state.password})
         .then(() => this.setState({redirect: true}))
     }
+
+    
 
 
     render() {

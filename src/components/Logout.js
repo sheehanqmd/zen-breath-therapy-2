@@ -27,7 +27,7 @@ class Logout extends Component {
         return (
             <div>
              
-                <button onClick={this.LogoutUser}>LOG OUT</button>
+                <li onClick={this.LogoutUser}>LOG OUT</li>
                
             </div>
         )

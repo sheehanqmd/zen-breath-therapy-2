@@ -1,4 +1,4 @@
-module.exports
+
 
 const bcrypt = require("bcryptjs");
 
@@ -63,10 +63,31 @@ module.exports = {
           }
       },
 
-
       logoutUser:(req, res) => {
         req.session.destroy();
             res.status(200).send(req.session);
             
       },
+      editUsername: (req, res) => {
+        const db = req.app.get('db');
+        const {username, password} = req.body
+        db.find_user(username)
+        .edit_name([req.params.id, name])
+        .then(response => res.status(200).json(response))
+        .catch(err => {
+            res.status(500).send({errorMessage: "Error"});
+        });
+    }
+    // editNote: (req, res) => {
+    //     const { id } = req.params;
+    //     const { note_title, note_content } = req.body;
+    //     console.log(id, note_title, note_content);
+    //     const dbInstance = req.app.get("db");
+    //     dbInstance
+    //       .edit_note([id, note_title, note_content])
+    //       .then(response => {
+    //         console.log(`"newArr:" ${response}`);
+    //         res.status(200).send(response);
+    //       })
+    //       .catch(e => res.status(500).send(e));
       };

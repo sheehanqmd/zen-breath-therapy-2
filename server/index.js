@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const massive = require("massive");
 const session = require("express-session");
-const {signupUser, loginUser, getUser, logoutUser } = require('./controllers/authController')
+const {signupUser, loginUser, getUser, logoutUser, editUsername } = require('./controllers/authController')
 const app = express();
 const { getEvents} = require('./controllers/eventsController');
 const { addToCart, getCart, deleteFromCart } = require("./controllers/cartController")
@@ -31,9 +31,11 @@ app.post("/auth/login", loginUser)
 app.get("/auth/user", getUser)
 app.post("/auth/logout", logoutUser)
 app.get("/api/events", getEvents)
+
 app.post("/api/cart", addToCart)
 app.get("/api/cart", getCart)
 app.delete("/api/cart/:index", deleteFromCart);
+app.patch("auth/user/:id", editUsername);
 
 // app.post("/api/cart/checkout", cartController.checkout);
 // app.post("/api/cart/:id", cartController.add);

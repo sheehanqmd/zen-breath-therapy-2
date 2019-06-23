@@ -8,6 +8,7 @@ import Cart from './components/cart/Cart';
 import Login from './components/login/Login';
 import Signup from './components/signup/Signup';
 import Logout from './components/Logout';
+import EditUsername from "./components/EditUsername";
 
 
 export default (
@@ -22,5 +23,6 @@ export default (
       <Route path="/login" component={ Login }  />
       <Route path="/signup" component={ Signup }  />
       <Route path="/logout" component={ Logout } />
+      <Route path="/editUsername" component={ EditUsername} />
     </Switch>
   );
