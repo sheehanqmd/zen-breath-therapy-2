@@ -56,7 +56,7 @@ console.log(this.state.eventsInfo)
                         <p className="start">Event Start Date and Time: {event.start.local}</p>
                         <p className="end">Event End Date and Time: {event.end.local}</p>
                         <p className="location">Location: {event.venue.address.localized_address_display}</p>
-                        <p className="cost">Cost to Attend: $249</p>
+                        <p className="cost">Cost to Attend: ${event.cost} </p>
                         <p><Link>{event.url}</Link></p>
                        
                         <p><button className="btn btn- black darken-3-LARGE" onClick={() => this.addEvent(event)}>ADD TO CART</button></p>

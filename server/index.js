@@ -6,6 +6,7 @@ const {signupUser, loginUser, getUser, logoutUser, editUsername } = require('./c
 const app = express();
 const { getEvents} = require('./controllers/eventsController');
 const { addToCart, getCart, deleteFromCart } = require("./controllers/cartController")
+// const { } = require ("./controllers/checkoutController")
 let { SERVER_PORT, SESSION_SECRET } = process.env;
 // let {'Authorization': `Bearer ${token}`} = process.env;
 
@@ -31,11 +32,12 @@ app.post("/auth/login", loginUser)
 app.get("/auth/user", getUser)
 app.post("/auth/logout", logoutUser)
 app.get("/api/events", getEvents)
+app.put("/auth/user/:username", editUsername);
 
 app.post("/api/cart", addToCart)
 app.get("/api/cart", getCart)
 app.delete("/api/cart/:index", deleteFromCart);
-app.patch("auth/user/:id", editUsername);
+
 
 // app.post("/api/cart/checkout", cartController.checkout);
 // app.post("/api/cart/:id", cartController.add);

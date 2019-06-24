@@ -13,6 +13,7 @@ class Cart extends Component {
     }
 
     componentDidMount(){
+        this.props.getUser()
         this.getCart()
      }
 
@@ -39,7 +40,7 @@ class Cart extends Component {
 
 
     render() {
-        console.log(this.props)
+        console.log(this.props.user)
         let cart = this.state.getCart.map((event, index) =>{
            
 
@@ -48,7 +49,7 @@ class Cart extends Component {
                 
                 <div className="cart-info">
                     <h2>{event.name.text}</h2>
-                    <h2>{event.cost}</h2>
+                    <h2>${event.cost}</h2>
                      <button className="cart-button" onClick={() => 
                         this.deleteFromCart(index)} >Remove From Cart</button>
                 </div>
@@ -65,6 +66,7 @@ class Cart extends Component {
                     <h1>Cart is Empty</h1>
               </div>
             )}
+             {/* <button><Link to="/checkout" className="checkout">Check Out</Link></button> */}
         </div>
     )
     }

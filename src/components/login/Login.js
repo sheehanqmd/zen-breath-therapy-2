@@ -20,7 +20,7 @@ export class Login extends Component {
         this.handleUsername = this.handleUsername.bind(this)
         this.handlePassword = this.handlePassword.bind(this)
         this.loginUser = this.loginUser.bind(this)
-        // this.editUsername = this.editUsername.bind(this)
+        
 
 
     }
@@ -58,7 +58,7 @@ if(this.state.redirect){
                     <br />
                     <br />
                    <button><Link to="/editUserName" className="editUserName">Edit User Name</Link></button>
-                   {/* <Link to="/" className="home">HOME</Link> */}
+                  
                   
                  <h1 className="facebook-Login"></h1>
                  {/* <Facebook /> */}

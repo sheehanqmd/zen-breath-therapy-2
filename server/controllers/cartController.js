@@ -2,6 +2,7 @@ module.exports = {
     addToCart: (req, res) => {
         console.log(req.body.event)
         req.session.user.cart.push(req.body.event)
+        req.session.user.total += req.body.event.cost
         res.status(200).json(req.session.user.cart)
     },
 
