@@ -5,10 +5,11 @@ const session = require("express-session");
 const {signupUser, loginUser, getUser, logoutUser, editUsername } = require('./controllers/authController')
 const app = express();
 const { getEvents} = require('./controllers/eventsController');
-const { addToCart, getCart, deleteFromCart } = require("./controllers/cartController")
+const { addToCart, getCart, deleteFromCart, checkout } = require("./controllers/cartController")
 // const { } = require ("./controllers/checkoutController")
 let { SERVER_PORT, SESSION_SECRET } = process.env;
 // let {'Authorization': `Bearer ${token}`} = process.env;
+
 
 app.use(express.json());
 
@@ -27,6 +28,10 @@ app.use(
 
 
 
+
+
+
+
 app.post("/auth/signup", signupUser)
 app.post("/auth/login", loginUser)
 app.get("/auth/user", getUser)
@@ -38,8 +43,14 @@ app.post("/api/cart", addToCart)
 app.get("/api/cart", getCart)
 app.delete("/api/cart/:index", deleteFromCart);
 
+app.post("/api/cart/checkout", checkout);
 
-// app.post("/api/cart/checkout", cartController.checkout);
+// app.get('/', (req, res) => {
+//   res.render('index', {
+//     stripePublishableKey: keys.stripePublishableKey
+//   });
+// });
+
 // app.post("/api/cart/:id", cartController.add);
 
 
@@ -49,6 +60,8 @@ massive(process.env.CONNECTION_STRING).then(db => {
 }).catch(err => console.log(err));
 
 // {'Authorization': `Bearer ${token}`}
+
+
 
 app.listen(SERVER_PORT, () => {
   console.log(`Server listening on port ${SERVER_PORT}.`);

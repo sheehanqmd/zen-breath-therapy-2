@@ -6,16 +6,18 @@ const bcrypt = require("bcryptjs");
 module.exports = {
     signupUser: (req, res) => {
       console.log(req.body)
-      const { username, password } = req.body;
+      const { first_name, last_name, email, username, password } = req.body;
       const db = req.app.get('db')
 
       db.find_user(username).then( usersList => {
-          if(usersList.length > 0){
+          if(usersList.length !== 0){
               res.status(403).json({error: "USERNAME_TAKEN"})
           } else {
-              bcrypt.hash(password, 10).then(newPassword => {
-                  db.add_user(username, newPassword).then(()=>{
-                      res.status(200).json(username)
+              console.log("else")
+              bcrypt.hash(password, 10).then( hash => {
+                  db.add_user(first_name, last_name, email, username, hash).then(()=>{
+                     
+                      res.status(200).json(req.session.user)
                   })
               })
           }

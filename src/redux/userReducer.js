@@ -2,7 +2,8 @@ import axios from "axios";
 
 const initialState = {
   loading: false,
-  user: []
+  user: [],
+  firstName: ""
 };
 
 const GET_USER = "GET_USER";

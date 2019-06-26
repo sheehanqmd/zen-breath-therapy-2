@@ -2,6 +2,10 @@ import React, { Component } from 'react'
 import axios from "axios";
 import {getUser} from "../../redux/userReducer";
 import {connect} from "react-redux";
+import CheckoutForm from "../CheckoutForm";
+import { Link, Redirect } from "react-router-dom";
+
+
 
 
 class Cart extends Component {
@@ -35,11 +39,21 @@ class Cart extends Component {
                     getCart: response.data
                 })
             })
+        }     
+       checkout(){
+           axios
+           .post("/api/cart/checkout", {getCart: this.state.getCart, user: this.props.getUser})
+           .then(() => this.setState({redirect: true}))
+
+       }
         
-        }
+        
 
 
     render() {
+        if (this.state.redirect) {
+           return <Redirect to='CheckoutForm' />
+       }
         console.log(this.props.user)
         let cart = this.state.getCart.map((event, index) =>{
            
@@ -52,8 +66,11 @@ class Cart extends Component {
                     <h2>${event.cost}</h2>
                      <button className="cart-button" onClick={() => 
                         this.deleteFromCart(index)} >Remove From Cart</button>
-                </div>
-            </div>
+              
+                         </div>
+                         {/* <span className="checkoutTotal"> Total: ${total}</span> */}
+                         <div> <button><Link to="/checkoutForm" className="checkoutForm">Checkout Now</Link></button></div>
+                     </div>
         );
     });
     return(
@@ -80,3 +97,4 @@ const mapStateToProps = reduxState => {
 
 
 export default connect ( mapStateToProps, {getUser}) (Cart)
+

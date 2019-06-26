@@ -9,19 +9,31 @@ export class Signup extends Component {
     constructor(){
         super()
         this.state ={
+            first_name: "",
+            last_name: "",
+            email: "",
             username: "",
             password: "",
-            // firstName: "",
-            // lastName: "",
             redirect: false
         }
+        this.handleFirst_name = this.handleFirst_name.bind(this)
+        this.handleLast_name = this.handleLast_name.bind(this)
+        this.handleEmail = this.handleEmail.bind(this)
         this.handleUsername = this.handleUsername.bind(this)
         this.handlePassword = this.handlePassword.bind(this)
-        // this.handleFirstName = this.handleFirstName.bind(this)
-        // this.handleLastName = this.handleLastName.bind(this)
+        
         this.signupUser = this.signupUser.bind(this)
        
-
+    }
+    handleFirst_name(e){
+        this.setState({first_name: e.target.value})
+    }
+    handleLast_name(e){
+        this.setState({last_name: e.target.value})
+    
+    }
+    handleEmail(e){
+        this.setState({email: e.target.value})
     }
 
     handleUsername(e){
@@ -32,13 +44,12 @@ export class Signup extends Component {
         this.setState({password: e.target.value})
     }
 
-    // handleFirstName(e){
-    //     this.setState({firstName: e.target.value})
-    // }
+    
 
     signupUser(){
-        axios.post("/auth/signup", {username: this.state.username, password: this.state.password})
-        .then(() => this.setState({redirect: true}))
+        console.log(this.state)
+        axios.post("/auth/signup", { first_name: this.state.first_name, last_name: this.state.last_name, email: this.state.email, username: this.state.username, password: this.state.password})
+        .then(() => this.setState({redirect: true})).catch((err) => alert(err, 'Username Taken'))
     }
 
     
@@ -46,7 +57,7 @@ export class Signup extends Component {
 
     render() {
         if(this.state.redirect){
-            alert("login")
+            alert("Please Log In")
             return<Redirect to="/login" />
         }
         return (
@@ -54,7 +65,11 @@ export class Signup extends Component {
                 <div className="container">
                <h3>Create a New Account</h3>
             
-            <div><input onChange={this.handleUsername} placeholder="username"/>
+            <div>
+                <input onChange={this.handleFirst_name} placeholder="firstName" />
+                <input onChange={this.handleLast_name} placeholder="lastName" />
+                <input onChange={this.handleEmail} placeholder="email@email.com"/>
+                <input onChange={this.handleUsername} placeholder="username"/>
                 <input onChange={this.handlePassword}placeholder="password" type="password"/>
             </div>
             <button className="btn-signup" onClick={this.signupUser}>Add New Account</button>

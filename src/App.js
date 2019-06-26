@@ -16,21 +16,11 @@ function App() {
     <div className="App">
 
       <Nav />
-      
       {routes}
-     
     </div>
     </Router>
 
-  //    <StripeProvider 
-  //    apiKey="pk_test_fCsl61Lrhj9Avk7NxHRBmZe800wot3l4za">
-  //    <div className="stripe">
-  //      <h1>React Stripe Elements Example</h1>
-  //      <Elements>
-  //        <CheckoutForm />
-  //      </Elements>
-  //    </div>
-  //  </StripeProvider>
+
    
   );
 
