@@ -25,6 +25,6 @@ export default (
       <Route path="/signup" component={ Signup }  />
       <Route path="/logout" component={ Logout } />
       <Route path="/editUsername" component={ EditUsername} />
-      <Route path="/checkoutForm" component={ CheckoutForm }/>
+      <Route path="/checkoutForm/:orderid" component={ CheckoutForm }/>
     </Switch>
   );

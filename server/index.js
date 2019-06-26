@@ -36,20 +36,20 @@ app.post("/auth/signup", signupUser)
 app.post("/auth/login", loginUser)
 app.get("/auth/user", getUser)
 app.post("/auth/logout", logoutUser)
-app.get("/api/events", getEvents)
 app.put("/auth/user/:username", editUsername);
 
+app.get("/api/events", getEvents)
 app.post("/api/cart", addToCart)
 app.get("/api/cart", getCart)
 app.delete("/api/cart/:index", deleteFromCart);
 
 app.post("/api/cart/checkout", checkout);
 
-// app.get('/', (req, res) => {
-//   res.render('index', {
-//     stripePublishableKey: keys.stripePublishableKey
-//   });
-// });
+app.get('/', (req, res) => {
+  res.render('index', {
+    stripePublishableKey: keys.stripePublishableKey
+  });
+});
 
 // app.post("/api/cart/:id", cartController.add);
 

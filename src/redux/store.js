@@ -5,6 +5,7 @@ import userReducer from "./userReducer";
 
 
 const rootReducer = combineReducers({
+    // cart: cartReducer,
     // event: eventReducer,
     user: userReducer
 })

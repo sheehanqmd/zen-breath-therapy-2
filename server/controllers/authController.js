@@ -44,6 +44,7 @@ module.exports = {
                        
                         req.session.user = {
                             username: user[0].username,
+                            id: user[0].id,
                             cart: [],
                             total: 0
                         };

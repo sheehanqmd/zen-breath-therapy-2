@@ -14,6 +14,9 @@ class Cart extends Component {
         this.state = {
             getCart: []
         };
+
+
+
     }
 
     componentDidMount(){
@@ -42,17 +45,18 @@ class Cart extends Component {
         }     
        checkout(){
            axios
-           .post("/api/cart/checkout", {getCart: this.state.getCart, user: this.props.getUser})
-           .then(() => this.setState({redirect: true}))
-
-       }
+           .post('/api/cart/checkout', {event_name: this.state.eventName, client_id: this.state.clientId,  purchase_total: this.state. purchase_total})
+           .then(response => {
+               console.log(response.data)
+               this.setState({orderId: response.data[0].id, redirect: true})
+        })
+           
+           .catch((err) => alert(err, 'Choose Payment Method'))
+        }
         
-        
-
-
     render() {
         if (this.state.redirect) {
-           return <Redirect to='CheckoutForm' />
+           return <Redirect to={`/checkoutForm/${this.state.orderId}`} />
        }
         console.log(this.props.user)
         let cart = this.state.getCart.map((event, index) =>{
@@ -69,7 +73,8 @@ class Cart extends Component {
               
                          </div>
                          {/* <span className="checkoutTotal"> Total: ${total}</span> */}
-                         <div> <button><Link to="/checkoutForm" className="checkoutForm">Checkout Now</Link></button></div>
+                        
+                         <div> <button><Link to="/checkoutForm" className="checkoutForm" onClick={() => this.checkout()}>Checkout Now</Link></button></div>
                      </div>
         );
     });
@@ -83,11 +88,22 @@ class Cart extends Component {
                     <h1>Cart is Empty</h1>
               </div>
             )}
-             {/* <button><Link to="/checkout" className="checkout">Check Out</Link></button> */}
+        
         </div>
     )
     }
 }
+
+    // const mapStateToProps = reduxState => {
+   
+   
+   
+    //     return { event 
+    // }
+        
+     
+    
+// }
 const mapStateToProps = reduxState => {
     const {user} = reduxState ;
     return {

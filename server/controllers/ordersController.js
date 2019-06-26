@@ -8,7 +8,7 @@
 //     const dbInstance = req.app.get("db");
 //     let clientId = req.session.user.clientId;
 //     console.log(clientId)
-//     const {event_name, client_id, order_date} = req.body;
+//     const {event_name, client_id, event_cost} = req.body;
 //     console.log(req.body);
 //     dbInstance.addOrder([
 //         event_name,

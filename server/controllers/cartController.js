@@ -23,25 +23,33 @@ module.exports = {
         res.status(200).json(req.session.user.cart)
     },
     
+// ORDERS
+//Each order should contain order_id (which automatically increments), client_id (passed in), total (sum of event costs), events (array of event names)
+
+//when inserting a new order, we pull the client id off of the session user, we pull the total off of the session user, and we pass in the events from the session user's cart as the events array
+
 
     checkout: (req, res) => {
-        const { user } = req.session;
-        user.cart = [];
-        user.total = 0;
-        res.status(200).send(user);
+        const { id, cart, total } = req.session.user;
+        // user.cart = [];
+        // user.total = 0;
+        // res.status(200).send(user);
+        // console.log(user)
 
         const dbInstance = req.app.get("db");
        
-        console.log(clientId)
-        const {event_name, client_id, event_id} = req.body;
+        // console.log(clientId)
+        // const {event_name, client_id, purchase_total} = req.body;
         console.log(req.body);
-        dbInstance.addOrder([
-            event_name,
-            client_id,
-            event_id
-            
+        dbInstance.createOrder([
+            id,
+            cart,
+            total
         ])
-        .then(response => res.status(200));
+        .then(response => {
+            console.log(response)
+            res.status(200).json(response)
+        });
     },
    
    
