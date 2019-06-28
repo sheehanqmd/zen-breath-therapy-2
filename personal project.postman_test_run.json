@@ -1,0 +1,338 @@
+{
+	"id": "6c453fbd-456c-47b3-af3d-a80661ff79d6",
+	"name": "personal project",
+	"allTests": [],
+	"timestamp": "2019-06-28T02:55:13.397Z",
+	"collection_id": "045ff912-4f92-4c1d-9d5d-7d36a0ba3156",
+	"folder_id": 0,
+	"target_type": "collection",
+	"environment_id": "0",
+	"data": [],
+	"delay": 0,
+	"count": 1,
+	"collection": {
+		"id": "045ff912-4f92-4c1d-9d5d-7d36a0ba3156",
+		"name": "personal project",
+		"description": "",
+		"auth": null,
+		"events": null,
+		"variables": [],
+		"order": [
+			"c8bfbb94-c000-4f30-9e22-fea1e4013f53",
+			"6a588d63-1f45-4da5-9cde-7b2d8eca24e5",
+			"78b65278-c12d-4b8d-a812-6d6bf7964305",
+			"274ed182-d4bd-45f3-ba8c-b4d7b09af52f"
+		],
+		"folders_order": [],
+		"owner": "7870466",
+		"favorite": false
+	},
+	"folder": null,
+	"environment": null,
+	"globals": [],
+	"results": [
+		{
+			"name": "personal project endpoints test",
+			"id": "c8bfbb94-c000-4f30-9e22-fea1e4013f53",
+			"url": "http://localhost:5050/auth/logout",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Response time is less than 200ms": true,
+				"Body matches string": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				"5"
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Response time is less than 200ms": true,
+					"Body matches string": false
+				}
+			],
+			"time": "5",
+			"totalRequestTime": "5",
+			"iterationResults": {}
+		},
+		{
+			"name": "personal project endpoints test",
+			"id": "6a588d63-1f45-4da5-9cde-7b2d8eca24e5",
+			"url": "http://localhost:5050//api/orderHistory",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"tests": {
+				"Status code is 200": false,
+				"Response time is less than 200ms": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"3"
+			],
+			"allTests": [
+				{
+					"Status code is 200": false,
+					"Response time is less than 200ms": true,
+					"Body matches string": true
+				}
+			],
+			"time": "3",
+			"totalRequestTime": "3",
+			"iterationResults": {}
+		},
+		{
+			"name": "personal project endpoints test",
+			"id": "78b65278-c12d-4b8d-a812-6d6bf7964305",
+			"url": "http://localhost:5050//api/cart",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"tests": {
+				"Response time is less than 200ms": true,
+				"Body matches string": true,
+				"Successful POST request": false
+			},
+			"testPassFailCounts": {
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Successful POST request": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				"3"
+			],
+			"allTests": [
+				{
+					"Response time is less than 200ms": true,
+					"Body matches string": true,
+					"Successful POST request": false
+				}
+			],
+			"time": "3",
+			"totalRequestTime": "3",
+			"iterationResults": {}
+		},
+		{
+			"name": "personal project endpoints test",
+			"id": "274ed182-d4bd-45f3-ba8c-b4d7b09af52f",
+			"url": "http://localhost:5050//api/cart",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"tests": {
+				"Response time is less than 200ms": true,
+				"Body matches string": true,
+				"Successful POST request": false
+			},
+			"testPassFailCounts": {
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Successful POST request": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				"2"
+			],
+			"allTests": [
+				{
+					"Response time is less than 200ms": true,
+					"Body matches string": true,
+					"Successful POST request": false
+				}
+			],
+			"time": "2",
+			"totalRequestTime": "2",
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 8,
+	"totalFail": 4,
+	"totalTime": 13,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "personal project endpoints test",
+			"id": "c8bfbb94-c000-4f30-9e22-fea1e4013f53",
+			"url": "http://localhost:5050/auth/logout",
+			"time": "2019-06-28T02:55:13.397Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 0,
+					"fail": 1
+				}
+			}
+		},
+		{
+			"name": "personal project endpoints test",
+			"id": "6a588d63-1f45-4da5-9cde-7b2d8eca24e5",
+			"url": "http://localhost:5050//api/orderHistory",
+			"time": "2019-06-28T02:55:13.397Z",
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "personal project endpoints test",
+			"id": "78b65278-c12d-4b8d-a812-6d6bf7964305",
+			"url": "http://localhost:5050//api/cart",
+			"time": "2019-06-28T02:55:13.397Z",
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"testPassFailCounts": {
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Successful POST request": {
+					"pass": 0,
+					"fail": 1
+				}
+			}
+		},
+		{
+			"name": "personal project endpoints test",
+			"id": "274ed182-d4bd-45f3-ba8c-b4d7b09af52f",
+			"url": "http://localhost:5050//api/cart",
+			"time": "2019-06-28T02:55:13.397Z",
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"testPassFailCounts": {
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Successful POST request": {
+					"pass": 0,
+					"fail": 1
+				}
+			}
+		}
+	],
+	"synced": false
+}
