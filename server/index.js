@@ -9,6 +9,7 @@ const { addToCart, getCart, deleteFromCart, checkout } = require("./controllers/
 // const { } = require ("./controllers/checkoutController")
 let { SERVER_PORT, SESSION_SECRET } = process.env;
 // let {'Authorization': `Bearer ${token}`} = process.env;
+const { orderHistory} = require("./controllers/ordersController");
 
 
 app.use(express.json());
@@ -44,6 +45,8 @@ app.get("/api/cart", getCart)
 app.delete("/api/cart/:index", deleteFromCart);
 
 app.post("/api/cart/checkout", checkout);
+
+app.get("/api/orderHistory", orderHistory);
 
 app.get('/', (req, res) => {
   res.render('index', {

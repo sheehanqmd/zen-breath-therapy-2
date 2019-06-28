@@ -10,6 +10,7 @@ import Signup from './components/signup/Signup';
 import Logout from './components/Logout';
 import EditUsername from "./components/EditUsername";
 import CheckoutForm from "./components/CheckoutForm";
+import OrderHistory from "./components/OrderHistory";
 
 
 export default (
@@ -25,6 +26,7 @@ export default (
       <Route path="/signup" component={ Signup }  />
       <Route path="/logout" component={ Logout } />
       <Route path="/editUsername" component={ EditUsername} />
-      <Route path="/checkoutForm/:orderid" component={ CheckoutForm }/>
+      <Route path="/checkoutForm" component={ CheckoutForm }/>
+      <Route path="/orderHistory" component={ OrderHistory}/>
     </Switch>
   );

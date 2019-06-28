@@ -28,14 +28,19 @@ class Cart extends Component {
      getCart(cart){
          axios .get("/api/cart")
          .then(response => {
+
             this.setState({
+                
                 getCart: response.data 
             })
          })
         }
+
+       
         
          deleteFromCart(index){
-            axios .delete(`/api/cart/${index}`)
+            axios 
+            .delete(`/api/cart/${index}`)
             .then(response => {
                 console.log(response.data)
                 this.setState ({
@@ -63,8 +68,8 @@ class Cart extends Component {
            
 
         return (
-            <div className="cart-container"> key={index}>
-                
+            <div className="cart-container" key={index}>
+              
                 <div className="cart-info">
                     <h2>{event.name.text}</h2>
                     <h2>${event.cost}</h2>
@@ -72,7 +77,7 @@ class Cart extends Component {
                         this.deleteFromCart(index)} >Remove From Cart</button>
               
                          </div>
-                         {/* <span className="checkoutTotal"> Total: ${total}</span> */}
+                         <span className="checkoutTotal"> Total: ${this.props.user.user.total}</span>
                         
                          <div> <button><Link to="/checkoutForm" className="checkoutForm" onClick={() => this.checkout()}>Checkout Now</Link></button></div>
                      </div>
@@ -86,6 +91,7 @@ class Cart extends Component {
             ) : (
                 <div className="empty-cart">
                     <h1>Cart is Empty</h1>
+                    <button><Link to="/orderHistory" className="orderHistory">Order History</Link></button>
               </div>
             )}
         
@@ -113,4 +119,5 @@ const mapStateToProps = reduxState => {
 
 
 export default connect ( mapStateToProps, {getUser}) (Cart)
+
 
