@@ -3,7 +3,7 @@ import axios from 'axios';
 import { Link } from "react-router-dom";
 import {getUser} from "../../redux/userReducer";
 import {connect} from "react-redux";
-
+// import "./Events.css";
 
 
 
@@ -47,9 +47,15 @@ console.log(this.state.eventsInfo)
     
         return (
             <div>
-            <div className="events container">
+
+            <div className="events-container">
                 {eventsInfo.map((event, index) =>
                     (
+                        <div class="container">
+                          <div class="row">
+                              <div class="row s12 l3 ">
+                                  <div class="card">
+                            <div class="card-content">
                         <div key={event.id}>
                         <h5 className="name">{event.name.text}</h5>
                         <p>{event.description.text}</p>
@@ -58,8 +64,19 @@ console.log(this.state.eventsInfo)
                         <p className="location">Location: {event.venue.address.localized_address_display}</p>
                         <p className="cost">Cost to Attend: ${event.cost} </p>
                         <a href="{url}">{event.url}</a>
+                        <br />
+                        
+                        <p><button className="waves-effect waves black btn -LARGE" onClick={() => this.addEvent(event)}>ADD TO CART</button></p>
+  
+                        <br>
+                        </br>
                        
-                        <p><button className="btn btn- black darken-3-LARGE" onClick={() => this.addEvent(event)}>ADD TO CART</button></p>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
+                        
 
                      </div>
                     ))}

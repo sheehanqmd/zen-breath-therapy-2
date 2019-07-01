@@ -31,6 +31,7 @@ module.exports = {
 
     checkout: (req, res) => {
         const { id, cart, total } = req.session.user;
+        console.log(cart.event)
         // user.cart = [];
         // user.total = 0;
         // res.status(200).send(user);

@@ -5,6 +5,7 @@ import Facebook from "../Facebook";
 
 
 
+
 export class Signup extends Component {
     constructor(){
         super()
@@ -72,9 +73,9 @@ export class Signup extends Component {
                 <input onChange={this.handleUsername} placeholder="username"/>
                 <input onChange={this.handlePassword}placeholder="password" type="password"/>
             </div>
-            <button className="btn-signup" onClick={this.signupUser}>Add New Account</button>
+            <a className="waves-effect waves-light btn-signup" onClick={this.signupUser}>Add New Account</a>
             <h1 className="facebook-Login"></h1>
-                 {/* <Facebook /> */}
+                 <Facebook />
             </div>
             
 

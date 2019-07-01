@@ -25,7 +25,7 @@ class Cart extends Component {
      }
 
 
-     getCart(cart){
+     getCart(){
          axios .get("/api/cart")
          .then(response => {
 
@@ -50,7 +50,7 @@ class Cart extends Component {
         }     
        checkout(){
            axios
-           .post('/api/cart/checkout', {event_name: this.state.eventName, client_id: this.state.clientId,  purchase_total: this.state. purchase_total})
+           .post('/api/cart/checkout', {event_name: this.state.eventName, client_id: this.state.clientId,  purchase_total: this.state.purchase_total})
            .then(response => {
                console.log(response.data)
                this.setState({orderId: response.data[0].id, redirect: true})
@@ -60,6 +60,7 @@ class Cart extends Component {
         }
         
     render() {
+        console.log(this.state)
         if (this.state.redirect) {
            return <Redirect to={`/checkoutForm/${this.state.orderId}`} />
        }
@@ -68,8 +69,11 @@ class Cart extends Component {
            
 
         return (
+
+            <div>
+                    <div className="container">  
             <div className="cart-container" key={index}>
-              
+             
                 <div className="cart-info">
                     <h2>{event.name.text}</h2>
                     <h2>${event.cost}</h2>
@@ -81,6 +85,8 @@ class Cart extends Component {
                         
                          <div> <button><Link to="/checkoutForm" className="checkoutForm" onClick={() => this.checkout()}>Checkout Now</Link></button></div>
                      </div>
+                     </div>
+                     </div>
         );
     });
     return(
@@ -89,9 +95,17 @@ class Cart extends Component {
             {cart[0] ? (
                 cart
             ) : (
-                <div className="empty-cart">
+                <div>
+                    <div className="container">              
+                     <div className="empty-cart">
                     <h1>Cart is Empty</h1>
-                    <button><Link to="/orderHistory" className="orderHistory">Order History</Link></button>
+                    <br />
+                    <br />
+                    <br />
+                    <a class="waves-effect grey btn-large"><Link to="/orderHistory" className="orderHistory">Order History</Link></a>
+                    </div>
+                    </div> 
+                    
               </div>
             )}
         

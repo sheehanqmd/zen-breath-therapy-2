@@ -45,7 +45,7 @@ class EditUsername extends Component {
                    </div><input onChange={this.handleUsername}placeholder= "username"/>      
                    <input  onChange={this.handleEditUsername}placeholder ="newUsername "/>
                   
-                   <button className="btn-editUsername" onClick={this.editUsername}>Update User Name</button>
+                   <a className="waves-effect waves-light-btn-editUsername" onClick={this.editUsername}>Update User Name</a>
                    </div> 
                    
               

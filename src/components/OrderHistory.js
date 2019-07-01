@@ -19,7 +19,7 @@ export class OrderHistory extends Component {
         axios
         .get('/api/orderHistory')
         .then(response => {
-            console.log(response)
+            console.log(response.data)
             this.setState({ orderHistory: response.data });
         }).catch(error => {
             console.log(error)
@@ -39,8 +39,8 @@ export class OrderHistory extends Component {
 
                   {orderHistory.map((order, index) =>
                     <div className="order">
-                        <h2>{orderHistory.event_name}</h2>
-                        <h2>{orderHistory.purchase_total}</h2>
+                        <h2>{order.event_name}</h2>
+                        <h2>{order.purchase_total}</h2>
                     </div> )}
                   
 

@@ -1,2 +1,13 @@
-
-<img> src="https://img.fontspace.com/api/renderfont4/rXOB/eyJ3IjoxMDAwLCJoIjoxNjUsImZzIjoxNjUsInIiOiJnZGkiLCJmZ2MiOiIjMDAwMDAwIn0/IEJyZWF0aCBUaGVyYXB5/blackberry-jam-personal-use.png"> alt="Breath Therapy";
+body {
+    margin: 0;
+    padding: 0;
+    font-family: serif;
+      /* background-image: url(https://images.pexels.com/photos/7640/pexels-photo.jpg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=650&w=940); */
+      -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+      
+      
+      background-color: whitesmoke;
+  } 

@@ -54,14 +54,15 @@ if(this.state.redirect){
                <div> 
                    <input placeholder = "username" onChange={this.handleUsername}/>             
                    <input placeholder ="password " type = "password" onChange={this.handlePassword}/>
-                   <button className="btn-login" variant="contained" onClick={this.loginUser}>Log In</button>
+                   <a className="waves-effect waves-light btn-signup" onClick={this.loginUser}>Log In</a>
+                   
                     <br />
                     <br />
-                   <button><Link to="/editUserName" className="editUserName">Edit User Name</Link></button>
+                   <a><Link to="/editUserName" className="waves-effect waves-UserName">Edit User Name</Link></a>
                   
                   
                  <h1 className="facebook-Login"></h1>
-                 {/* <Facebook /> */}
+                 <Facebook />
                </div>
             </div>
         )
