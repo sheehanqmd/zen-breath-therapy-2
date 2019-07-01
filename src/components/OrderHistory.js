@@ -33,17 +33,22 @@ export class OrderHistory extends Component {
         return (
 
             <div>
+                
                 <h1>Order History</h1>
 
               <div className="order-history">
+              <div className="cart-info">
+
+<div className="container section about-info">
 
                   {orderHistory.map((order, index) =>
                     <div className="order">
+                        
                         <h2>{order.event_name}</h2>
                         <h2>{order.purchase_total}</h2>
                     </div> )}
-                  
-
+                    </div>
+                    </div>
               </div>
 
             </div>

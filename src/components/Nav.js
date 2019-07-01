@@ -8,14 +8,21 @@ import Cart from './cart/Cart';
 
 function Nav() {
   return(
-      <nav className= "nav-wrapper black black-8">
+    <div>
+      <div class="navbar-fixed">
+      <nav className= "nav-wrapper blue-grey darken-2">
 
 
           <div className="container">
 
-          <ul className="right">
-          <li><Link to="/" className="home">BREATH THERAPY</Link></li>
-         
+          
+          <a href="#"><Link to="/" className="brand-logo left">BREATH THERAPY</Link></a>
+
+          {/* <a href="#" class="sidenav-trigger" data-target="mobile-links">
+            <i class="material-icons">menu</i>
+          </a> */}
+
+          <ul className="hide-on-med-and-down right">
           <li><Link to="/about" >ABOUT</Link></li>
           <li><Link to="/events" className="/events">EVENTS</Link></li>
           <li><Link to="/cart" className="/cart">CART</Link></li>
@@ -28,7 +35,19 @@ function Nav() {
           </ul>
           </div>
       </nav>
-      
+      </div>
+
+      {/* <ul class="sidenav" id="mobile-links ">
+         <li><Link to="/about" >ABOUT</Link></li>
+          <li><Link to="/events" className="/events">EVENTS</Link></li>
+          <li><Link to="/cart" className="/cart">CART</Link></li>
+      </ul>
+ <script>
+ const mobile-links = document.querySelectorAll(".sidenav");
+ M.Sidenav.init(mobile-links,{});
+</script>  */}
+
+      </div>
       
     ) 
 }

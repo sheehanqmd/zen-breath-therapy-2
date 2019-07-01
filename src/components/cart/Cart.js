@@ -75,18 +75,30 @@ class Cart extends Component {
             <div className="cart-container" key={index}>
              
                 <div className="cart-info">
-                    <h2>{event.name.text}</h2>
-                    <h2>${event.cost}</h2>
-                     <button className="cart-button" onClick={() => 
-                        this.deleteFromCart(index)} >Remove From Cart</button>
-              
+
+                <div className="container section about-info">
+            <div className="card blue-grey darken-1">
+                 <div className="card-content white-text ">
+                    <h4>{event.name.text}</h4>
+                    <h5>${event.cost}</h5>
                          </div>
                          <span className="checkoutTotal"> Total: ${this.props.user.user.total}</span>
                         
+                         <div className="card-action grey lighten-4 grey-text" > 
                          <div> <button><Link to="/checkoutForm" className="checkoutForm" onClick={() => this.checkout()}>Checkout Now</Link></button></div>
+                </div>
+                <div className="card-action grey lighten-4 grey-text" > 
+                <button className="cart-button" onClick={() => 
+                        this.deleteFromCart(index)} >Remove From Cart</button>
+                </div>
+                         
+                         </div>
+                       </div> 
+                </div>  
                      </div>
                      </div>
                      </div>
+
         );
     });
     return(
