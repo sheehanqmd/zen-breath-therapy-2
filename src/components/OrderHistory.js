@@ -14,6 +14,10 @@ export class OrderHistory extends Component {
     }
     componentDidMount(){
         this.orderHistory()
+        // this.ChangeOrderHistory(this.state.orderHistory)
+
+
+        
     }
     orderHistory = () => {
         axios
@@ -25,7 +29,16 @@ export class OrderHistory extends Component {
             console.log(error)
         })
     }
-
+ 
+    ChangeOrderHistory(str){
+        console.log(str);
+        if (str === null) {
+            return null;
+        }
+        let arr = str[0].split('"');
+        let index = arr.indexOf("text");
+        return arr[index + 2]
+    }
     render() {
         const { orderHistory } = this.state;
         console.log(orderHistory)
@@ -34,18 +47,18 @@ export class OrderHistory extends Component {
 
             <div>
                 
-                <h1>Order History</h1>
+                <h1 className="order-history">Order History</h1>
 
-              <div className="order-history">
+              <div className="orderHistory">
               <div className="cart-info">
 
 <div className="container section about-info">
 
                   {orderHistory.map((order, index) =>
                     <div className="order">
-                        
-                        <h2>{order.event_name}</h2>
-                        <h2>{order.purchase_total}</h2>
+                        {console.log(order)}
+                        <h2>{this.ChangeOrderHistory(order.event_name)}</h2>
+                        <h2>${order.purchase_total}</h2>
                     </div> )}
                     </div>
                     </div>

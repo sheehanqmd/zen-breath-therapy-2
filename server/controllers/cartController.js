@@ -17,9 +17,13 @@ module.exports = {
 
     deleteFromCart: (req, res) => {
       console.log(req.params)
+      const {index} = req.params
+      console.log( "total",  req.session.user.total)
+      console.log( "cost", req.session.user.cart[index].cost)
+      req.session.user.total -= req.session.user.cart[index].cost
         req.session.user.cart.splice(+req.params.index, 1)
-        // req.session.user.total -= req.params.event.cost
-        console.log(req.session.user.cart)
+       
+        console.log(req.session.user.total)
         res.status(200).json(req.session.user.cart)
     },
     

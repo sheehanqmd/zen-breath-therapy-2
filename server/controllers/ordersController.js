@@ -23,7 +23,7 @@ module.exports = {
         const client_id = req.session.user.id;
         db.orderHistory(client_id)
         .then(response => {
-            // console.log(response)
+            console.log(response)
             res.status(200).json(response)
         })
         .catch(error => {

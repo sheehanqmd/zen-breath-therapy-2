@@ -20,17 +20,16 @@ class Cart extends Component {
     }
 
     componentDidMount(){
-        this.props.getUser()
-        this.getCart()
+        this.props.getUser().then(() => {
+            this.getCart()
+        })
      }
 
 
      getCart(){
          axios .get("/api/cart")
          .then(response => {
-
-            this.setState({
-                
+            this.setState({ 
                 getCart: response.data 
             })
          })
@@ -46,6 +45,7 @@ class Cart extends Component {
                 this.setState ({
                     getCart: response.data
                 })
+                this.props.getUser()
             })
         }     
        checkout(){
@@ -66,7 +66,6 @@ class Cart extends Component {
        }
         console.log(this.props.user)
         let cart = this.state.getCart.map((event, index) =>{
-           
 
         return (
 
@@ -108,13 +107,13 @@ class Cart extends Component {
                 cart
             ) : (
                 <div>
-                    <div className="container">              
+                    <div className="container-empty-cart">              
                      <div className="empty-cart">
                     <h1>Cart is Empty</h1>
                     <br />
                     <br />
                     <br />
-                    <a class="waves-effect grey btn-large"><Link to="/orderHistory" className="orderHistory">Order History</Link></a>
+                    <a className="waves-effect grey btn-large"><Link to="/orderHistory" className="order-history-button">View Order History</Link></a>
                     </div>
                     </div> 
                     

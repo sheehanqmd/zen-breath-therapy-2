@@ -74,6 +74,7 @@ export class Signup extends Component {
                 <input onChange={this.handlePassword}placeholder="password" type="password"/>
             </div>
             <a className="waves-effect waves-light btn-signup" onClick={this.signupUser}>Add New Account</a>
+            
             <h1 className="facebook-Login"></h1>
                  <Facebook />
             </div>
