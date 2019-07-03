@@ -23,7 +23,7 @@ function Nav() {
           </a> */}
 
           <ul className="hide-on-med-and-down right">
-          <li><Link to="/about" >ABOUT</Link></li>
+          <li><Link to="/about" >BENEFITS</Link></li>
           <li><Link to="/events" className="/events">EVENTS</Link></li>
           <li><Link to="/cart" className="/cart">CART</Link></li>
           <li><Link to="/login" className="/login">LOG IN</Link></li>
