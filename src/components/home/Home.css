@@ -12,7 +12,8 @@ body {
   } 
 
 .picture{
- 
+  margin: 0;
+  padding: 0;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -45,6 +46,7 @@ body {
   color: rgb(69,90,100);
   font-size: 30vw;
   position:absolute; 
+  padding-left: 50px;
   top: 150px;
   transform: translateX(7px)
 }
@@ -52,6 +54,11 @@ body {
 .title {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+} 
   
-  
-}
+footer {
+  margin-top: 0%;
+  top: 730px;
+  width: 100vw;
+  }

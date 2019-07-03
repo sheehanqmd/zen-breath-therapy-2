@@ -5,7 +5,7 @@ import routes from "./routes";
 // import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 // import {Elements, StripeProvider} from 'react-stripe-elements';
 // import CheckoutForm from './CheckoutForm';
-
+import Footer from "./components/Footer"
 import Nav from "./components/Nav";
 
 
@@ -16,7 +16,7 @@ function App() {
     <div className="App">
 
       <Nav />
-
+    
       {routes}
     </div>
     </Router>

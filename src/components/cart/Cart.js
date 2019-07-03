@@ -8,6 +8,7 @@ import { Link, Redirect } from "react-router-dom";
 
 
 
+
 class Cart extends Component {
     constructor(props){
         super(props)
@@ -102,6 +103,7 @@ class Cart extends Component {
     });
     return(
         <div className="cart-container">
+            
          
             {cart[0] ? (
                 cart
@@ -113,9 +115,11 @@ class Cart extends Component {
                     <br />
                     <br />
                     <br />
-                    <a className="waves-effect grey btn-large"><Link to="/orderHistory" className="order-history-button">View Order History</Link></a>
+                    <div className="history-button">
+                    <a className="waves-effect grey btn-large"><Link to="/orderHistory" className="button">View Order History</Link></a>
                     </div>
                     </div> 
+                    </div>
                     
               </div>
             )}

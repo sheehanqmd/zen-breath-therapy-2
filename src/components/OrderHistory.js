@@ -48,8 +48,10 @@ export class OrderHistory extends Component {
             <div>
                 
                 <h1 className="order-history">Order History</h1>
+                <br />
 
               <div className="orderHistory">
+                  
               <div className="cart-info">
 
 <div className="container section about-info">

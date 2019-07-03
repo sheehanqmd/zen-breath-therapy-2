@@ -30,7 +30,7 @@ code {
   justify-content: center;
 }
 
-.order-history-button {
+ .history-button {
   display: flex;
   justify-content: center;
-}
+} 
