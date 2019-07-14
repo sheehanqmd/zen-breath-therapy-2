@@ -27,7 +27,7 @@ const events = {
                 "html": "<P>How do the properties of water affect a yoga postures practice and the linking of breath with movement? In this multi-module series learn how buoyancy, water viscosity and hydrostatic pressure can both facilitate and challenge breath-centric movements. You'll discover how yoga postures practice in the water will deepen your understanding of practice on land.</P>\n<P>Tuesday and Thursday afternoon workshop format. Learn something new this summer and get out of the Texas heat!</P>\n<P>See other Monday, Wednesday, Friday workshop format on our webpage and learn more about the workshops at:</P>\n<P>https://www.dallasaquayoga.com/aqua-yoga-linking-breath-movement-series/</P>\n<P>Single day attendance options also available!</P>"
             },
             "id": "62716428526",
-            "url": "https://www.eventbrite.com/o/dallas-aqua-yoga-21964986100",
+            "url": "https://www.eventbrite.com/e/aqua-yoga-linking-breath-and-movement-tickets-62716428526?aff=ebapi",
             "start": {
                 "timezone": "America/Chicago",
                 "local": "2019-06-20T13:30:00",
