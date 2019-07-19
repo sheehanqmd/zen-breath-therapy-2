@@ -6,16 +6,16 @@ const postStripeCharges = res => stripeRes => {
 };
 
 
-module.export = 
+module.export = postStripeCharges
 
 
-    app.post
-    fetch('/save-stripe-token', {
-      method: 'POST',
-      body: JSON.stringify(token),
-    }).then(response => {
-      response.json().then(data => {
-        alert(`We are in business, ${data.email}`);
+    // app.post
+    // fetch('/save-stripe-token', {
+    //   method: 'POST',
+    //   body: JSON.stringify(token),
+    // }).then(response => {
+    //   response.json().then(data => {
+    //     alert(`We are in business, ${data.email}`);
 
 // app.post("/charge", async (req, res) => {
 //     try {
@@ -32,4 +32,4 @@ module.export =
 //     }
 //   });
 
-
+      

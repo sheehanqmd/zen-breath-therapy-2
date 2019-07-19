@@ -13,6 +13,7 @@ const { orderHistory} = require("./controllers/ordersController");
 
 
 app.use(express.json());
+app.use( express.static( `${__dirname}/../build` ) );
 
 
 
