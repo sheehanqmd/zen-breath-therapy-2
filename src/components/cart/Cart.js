@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import axios from "axios";
 import {getUser} from "../../redux/userReducer";
 import {connect} from "react-redux";
-import CheckoutForm from "../CheckoutForm";
 import { Link, Redirect } from "react-router-dom";
 
 

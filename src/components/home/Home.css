@@ -1,5 +1,5 @@
 body {
-
+  background-origin: content-box;
     margin: 0;
     padding: 0;
     font-family: serif;
@@ -7,7 +7,10 @@ body {
       -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: cover;
       background-color: whitesmoke;
   } 
 
@@ -46,9 +49,10 @@ body {
   color: rgb(69,90,100);
   font-size: 30vw;
   position:absolute; 
-  padding-left: 50px;
+  /* padding-left: 50px;
+  padding-right: 50px; */
   top: 150px;
-  transform: translateX(7px)
+  transform: translateX(26px)
 }
 
 .title {
@@ -61,4 +65,8 @@ footer {
   margin-top: 0%;
   top: 730px;
   width: 100vw;
+  
   }
+.hide-on-med-and-down right{
+  
+}
