@@ -34,7 +34,7 @@
 		{
 			"name": "personal project endpoints test",
 			"id": "c8bfbb94-c000-4f30-9e22-fea1e4013f53",
-			"url": "http://localhost:5050/auth/logout",
+			
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -80,7 +80,7 @@
 		{
 			"name": "personal project endpoints test",
 			"id": "6a588d63-1f45-4da5-9cde-7b2d8eca24e5",
-			"url": "http://localhost:5050//api/orderHistory",
+			
 			"totalTime": 0,
 			"responseCode": {
 				"code": 404,
@@ -126,7 +126,7 @@
 		{
 			"name": "personal project endpoints test",
 			"id": "78b65278-c12d-4b8d-a812-6d6bf7964305",
-			"url": "http://localhost:5050//api/cart",
+		
 			"totalTime": 0,
 			"responseCode": {
 				"code": 404,
@@ -172,7 +172,7 @@
 		{
 			"name": "personal project endpoints test",
 			"id": "274ed182-d4bd-45f3-ba8c-b4d7b09af52f",
-			"url": "http://localhost:5050//api/cart",
+			,
 			"totalTime": 0,
 			"responseCode": {
 				"code": 404,
@@ -224,7 +224,7 @@
 		{
 			"name": "personal project endpoints test",
 			"id": "c8bfbb94-c000-4f30-9e22-fea1e4013f53",
-			"url": "http://localhost:5050/auth/logout",
+		
 			"time": "2019-06-28T02:55:13.397Z",
 			"responseCode": {
 				"code": 200,
@@ -252,7 +252,7 @@
 		{
 			"name": "personal project endpoints test",
 			"id": "6a588d63-1f45-4da5-9cde-7b2d8eca24e5",
-			"url": "http://localhost:5050//api/orderHistory",
+		
 			"time": "2019-06-28T02:55:13.397Z",
 			"responseCode": {
 				"code": 404,
@@ -280,7 +280,7 @@
 		{
 			"name": "personal project endpoints test",
 			"id": "78b65278-c12d-4b8d-a812-6d6bf7964305",
-			"url": "http://localhost:5050//api/cart",
+			
 			"time": "2019-06-28T02:55:13.397Z",
 			"responseCode": {
 				"code": 404,
@@ -308,7 +308,7 @@
 		{
 			"name": "personal project endpoints test",
 			"id": "274ed182-d4bd-45f3-ba8c-b4d7b09af52f",
-			"url": "http://localhost:5050//api/cart",
+			
 			"time": "2019-06-28T02:55:13.397Z",
 			"responseCode": {
 				"code": 404,

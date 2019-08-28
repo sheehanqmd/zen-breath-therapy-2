@@ -7,7 +7,7 @@ const getEvents = (req, res) => {
     res.json(events);
 }
 
-//add token to .env  XBF6FTA5Q7JVH7X3IEON
+
 const events = {
     "pagination": {
         "object_count": 73,
@@ -335,15 +335,15 @@ const events = {
         },
         {
             "name": {
-                "text": "black girls breathing™: the expansion tour - Dallas",
-                "html": "black girls breathing™: the expansion tour - Dallas"
+                "text": "girls breathing™: the expansion tour - Dallas",
+                "html": " girls breathing™: the expansion tour - Dallas"
             },
             "description": {
-                "text": "Dallas —  join black girls breathing™  as we come to your city with our tour that's all about EXPANSION! **limited tickets available**",
-                "html": "Dallas —  join black girls breathing™  as we come to your city with our tour that's all about EXPANSION! **limited tickets available**"
+                "text": "Dallas —  join girls breathing™  as we come to your city with our tour that's all about EXPANSION! **limited tickets available**",
+                "html": "Dallas —  join girls breathing™  as we come to your city with our tour that's all about EXPANSION! **limited tickets available**"
             },
             "id": "63696512985",
-            "url": "https://www.eventbrite.com/e/black-girls-breathingtm-the-expansion-tour-dallas-tickets-63696512985?aff=ebapi",
+            "url": "https://www.eventbrite.com/e/-girls-breathingtm-the-expansion-tour-dallas-tickets-63696512985?aff=ebapi",
             "vanity_url": "https://bgbexpansiontourdallas.eventbrite.com",
             "start": {
                 "timezone": "America/Chicago",

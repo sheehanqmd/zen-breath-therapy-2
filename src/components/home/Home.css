@@ -17,10 +17,12 @@ body {
 .picture{
   margin: 0;
   padding: 0;
+  width: 100%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  text-align:center;
 
 }
 
@@ -47,23 +49,27 @@ body {
 .title-2 {
   font-family: 'Lobster', cursive;
   color: rgb(69,90,100);
-  font-size: 30vw;
+  font-size: 28vw;
   position:absolute; 
-  /* padding-left: 50px;
-  padding-right: 50px; */
-  top: 150px;
+  
+  padding-left: 40px;
+  top:50px;
   transform: translateX(26px)
 }
 
 .title {
-  display: flex;
+  display: block;
+  position:absolute; 
   justify-content: center;
-  flex-direction: column;
+  /* flex-direction: column; */
+  
+
 } 
   
 footer {
-  margin-top: 0%;
-  top: 730px;
+  margin-top: -2%;
+  
+  top: 770px;
   width: 100vw;
   
   }
