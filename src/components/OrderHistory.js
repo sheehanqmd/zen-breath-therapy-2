@@ -60,7 +60,7 @@ export class OrderHistory extends Component {
                     <div className="order">
                         {console.log(order)}
                         <h2>{this.ChangeOrderHistory(order.event_name)}</h2>
-                        <h2>${order.purchase_total}</h2>
+                        <h2>: ${order.purchase_total}</h2>
                     </div> )}
                     </div>
                     </div>

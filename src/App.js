@@ -1,11 +1,6 @@
 import React, {Component} from 'react';
 import { HashRouter as Router, } from 'react-router-dom';
 import routes from "./routes";
-// import './App.css';
-// import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
-// import {Elements, StripeProvider} from 'react-stripe-elements';
-// import CheckoutForm from './CheckoutForm';
-import Footer from "./components/Footer"
 import Nav from "./components/Nav";
 
 

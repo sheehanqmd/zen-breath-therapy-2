@@ -37,7 +37,7 @@ function Nav() {
       </nav>
       </div>
 
-      {/* <ul class="sidenav" id="mobile-links ">
+      <ul class="sidenav" id="mobile-links ">
          <li><Link to="/about" >ABOUT</Link></li>
           <li><Link to="/events" className="/events">EVENTS</Link></li>
           <li><Link to="/cart" className="/cart">CART</Link></li>
@@ -45,7 +45,7 @@ function Nav() {
  <script>
  const mobile-links = document.querySelectorAll(".sidenav");
  M.Sidenav.init(mobile-links,{});
-</script>  */}
+</script> 
 
       </div>
       

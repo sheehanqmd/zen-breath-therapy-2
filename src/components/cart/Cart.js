@@ -27,7 +27,7 @@ class Cart extends Component {
 
 
      getCart(){
-         axios .get("/api/cart")
+         axios.get("/api/cart")
          .then(response => {
             this.setState({ 
                 getCart: response.data 
@@ -35,13 +35,7 @@ class Cart extends Component {
          })
         }
 
-        changeDate = (str) => {
-            let newStr = str.split('')
-            newStr.splice(10, 12)
-            let mins = newStr.join('')
-    
-            return mins
-        }
+        
        
         
          deleteFromCart(index){
@@ -86,7 +80,7 @@ class Cart extends Component {
             <div className="card blue-grey darken-1">
                  <div className="card-content white-text ">
                     <h4>{event.name.text}</h4>
-                    <p className="start">Date: {this.changeDate (event.start.local)}</p>
+                    <p className="start">Date: {event.start.local}</p>
                     <h5>${event.cost}</h5>
 
                          </div>
