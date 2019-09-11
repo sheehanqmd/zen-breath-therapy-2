@@ -1,6 +1,6 @@
 
 
-const bcrypt = require("bcryptjs");
+const bcrypt = require("bcrypt");
 
 
 module.exports = {
